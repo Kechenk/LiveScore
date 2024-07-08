@@ -11,26 +11,28 @@
     @csrf
 
     <div x-data="{ open: true }">
-      <div @click="open = !open" class="cursor-pointer bg-gray-200 p-2 rounded">
+      <div @click="open = !open" class="cursor-pointer bg-gray-200 p-2 rounded w-1/2">
         <h2 class="font-bold text-xl">Informasi Pribadi</h2>
       </div>
       <div x-show="open" class="mt-4">
-        <div>
+        <div class="mt-4">
           <x-input-label for="name" :value="__('Name')" />
-          <x-text-input id="name" class="block mt-1 w-54 h-9" type="text" name="name" :value="old('name')"
-            required autofocus autocomplete="name" />
+          <x-text-input id="name"
+            class="shadow appearance-none border rounded w-1/2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
           <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
         <div class="mt-4">
           <x-input-label for="age" :value="__('Usia')" />
-          <x-text-input id="age" class="block mt-1 w-54 h-9" type="text" name="age" :value="old('age')"
-            required autofocus autocomplete="age" />
+          <x-text-input id="age"
+            class="shadow appearance-none border rounded w-1/2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="text" name="age" :value="old('age')" required autofocus autocomplete="age" />
           <x-input-error :messages="$errors->get('age')" class="mt-2" />
         </div>
 
         <div class="mt-4">
           <x-input-label for="belt" :value="__('Sabuk')" />
-          <select id="belt" name="belt" class="block mt-1 w-max h-9" required autofocus>
+          <select id="belt" name="belt" class=" py-2 px-3 items-center block mt-1 w-max h-9" required autofocus>
             <option value="Putih" {{ old('belt') == 'Putih' ? 'selected' : '' }}>Putih</option>
             <option value="Kuning" {{ old('belt') == 'Kuning' ? 'selected' : '' }}>Kuning</option>
             <option value="Orange" {{ old('belt') == 'Orange' ? 'selected' : '' }}>Orange</option>
@@ -43,8 +45,16 @@
         </div>
 
         <div class="mt-4">
+          <x-input-label for="dojo" :value="__('Dojo')" />
+          <select id="dojo" name="dojo" class=" py-2 px-3 items-center block mt-1 w-max h-9" required autofocus>
+            <option value="Meriam Bosok" {{ old('belt') == 'Meriam Bosok' ? 'selected' : '' }}>Meriam Bosok</option>
+          </select>
+          <x-input-error :messages="$errors->get('dojo')" class="mt-2" />
+        </div>
+
+        <div class="mt-4">
           <x-input-label for="sex" :value="__('Jenis Kelamin')" />
-          <select id="sex" name="sex" class="block mt-1 w-max h-9" required autofocus>
+          <select id="sex" name="sex" class="py-2 px-3 *:block mt-1 w-max h-9" required autofocus>
             <option value="Laki-Laki" {{ old('sex') == 'Laki-Laki' ? 'selected' : '' }}>Laki-Laki</option>
             <option value="Perempuan" {{ old('sex') == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
           </select>
