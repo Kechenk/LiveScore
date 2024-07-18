@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KaratekaController;
 
 Route::get('/', function () {
-    return view('dashboard', ['title' => 'Dashboard']);
+    return view('welcome', ['title' => 'SportsData']);
 });
 
 Route::get('/team', function () {

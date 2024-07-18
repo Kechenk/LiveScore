@@ -29,7 +29,7 @@
             type="text" name="age" :value="old('age')" required autofocus autocomplete="age" />
           <x-input-error :messages="$errors->get('age')" class="mt-2" />
         </div>
-
+        
         <div class="mt-4">
           <x-input-label for="belt" :value="__('Sabuk')" />
           <select id="belt" name="belt" class=" py-2 px-3 items-center block mt-1 w-max h-9" required autofocus>
@@ -48,6 +48,7 @@
           <x-input-label for="dojo" :value="__('Dojo')" />
           <select id="dojo" name="dojo" class=" py-2 px-3 items-center block mt-1 w-max h-9" required autofocus>
             <option value="Meriam Bosok" {{ old('belt') == 'Meriam Bosok' ? 'selected' : '' }}>Meriam Bosok</option>
+            <option value="Meriam Bosok" {{ old('belt') == 'Meriam Bosok' ? 'selected' : '' }}>Meriam Tempur</option>
           </select>
           <x-input-error :messages="$errors->get('dojo')" class="mt-2" />
         </div>
