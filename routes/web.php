@@ -23,6 +23,10 @@ Route::get('/reports', function () {
     return view('reports', ['title' => 'Reports']);
 });
 
+Route::get('/log', function() {
+    return view('log', ['title' => 'log']);
+});
+
 Route::get('/projects', [KaratekaController::class, 'index'])->name('dashboard.index');
 
 Route::post('/team', [KaratekaController::class, 'store']);
