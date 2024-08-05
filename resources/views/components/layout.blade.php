@@ -9,7 +9,7 @@
 
   <title>Sports Data</title>
   <link rel="icon" type="image/x-icon" href="src/img/garuda.png">
-
+  <link rel="stylesheet" href="style.css">
   <!-- Fonts -->
   @vite('resources/css/app.css')
 </head>

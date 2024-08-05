@@ -1,7 +1,7 @@
 <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
     <h2 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">NEWS</h2>
     <p class="mb-12 text-lg text-gray-500">Latest News From Sports Data</p>
-    <di class="w-full">
+    <div class="w-full">
       <div class="flex flex-col w-full mb-10 sm:flex-row">
         <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
           <div class="relative h-full ml-0 mr-0 sm:mr-10">
@@ -66,5 +66,6 @@
           </div>
         </div>
       </div>
-    </di\v>
+    </div>
   </div>
+

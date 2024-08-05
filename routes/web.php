@@ -23,8 +23,8 @@ Route::get('/reports', function () {
     return view('reports', ['title' => 'Reports']);
 });
 
-Route::get('/log', function() {
-    return view('log', ['title' => 'log']);
+Route::get('/login', function () {
+    return view('login', ['title' => 'Login Page']);
 });
 
 Route::get('/projects', [KaratekaController::class, 'index'])->name('dashboard.index');
